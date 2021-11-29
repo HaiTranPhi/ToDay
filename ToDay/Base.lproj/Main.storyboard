@@ -10,7 +10,7 @@
         <!--Initial View Controller-->
         <scene sceneID="u1v-lo-Tfj">
             <objects>
-                <tableViewController title="Initial View Controller" id="zn4-bP-mSJ" sceneMemberID="viewController">
+                <tableViewController title="Initial View Controller" id="zn4-bP-mSJ" customClass="ReminderListViewController" customModule="ToDay" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GiV-nY-kCZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,6 +47,9 @@
                                                 <backgroundConfiguration key="background"/>
                                                 <attributedString key="attributedTitle"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="doneButtonTriggere:" destination="8YK-jp-jpN" eventType="touchUpInside" id="HD1-io-Kf0"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwY-8k-WBV">
                                             <rect key="frame" x="59" y="11" width="33" height="31"/>
@@ -68,6 +71,12 @@
                                         <constraint firstItem="rAd-3s-sj4" firstAttribute="leading" secondItem="L8L-6G-SOG" secondAttribute="leading" multiplier="1:1" constant="7" id="F0w-Gs-czE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="AVD-qk-BTD" id="HA4-6A-FdB"/>
+                                    <outlet property="doneButton" destination="rAd-3s-sj4" id="nKQ-E7-Kvb"/>
+                                    <outlet property="titleDate" destination="AVD-qk-BTD" id="gfd-7l-YhD"/>
+                                    <outlet property="titleLabel" destination="YwY-8k-WBV" id="UqT-g3-BBn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
